@@ -26,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 0px 125px;
+  padding: 0px 0px 115px;
 }
 
 /* =====================
@@ -290,9 +290,9 @@ body {
 
   .btn-yes,
   .btn-no {
-    width: 100%;
+    width: 31%;
     font-size: 1.1rem;
-    padding: 12px 20px;
+    padding: 7px 6px;
   }
 
   .photo-card {
@@ -300,6 +300,19 @@ body {
     height: 140px;
   }
 }
+
+/* @media screen and (max-width:567px) {
+  .valentine-card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    background: transparent;
+    animation: gentleFloat 4s ease-in-out infinite;
+    margin: 0 auto;
+    padding: 20px;
+}
+} */
 
 /* floating hearts */
 .floating-bg {

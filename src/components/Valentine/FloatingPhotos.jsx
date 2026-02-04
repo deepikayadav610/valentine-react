@@ -1,8 +1,4 @@
 export default function FloatingPhotos() {
-  const handleLoop = (e) => {
-    e.currentTarget.play(); // restart video when it ends
-  };
-
   return (
     <div className="floating-photos">
       {/* VIDEO – TOP LEFT */}
@@ -17,7 +13,6 @@ export default function FloatingPhotos() {
             loop
             muted
             playsInline
-            onEnded={handleLoop}
           />
         </div>
       </div>
@@ -34,7 +29,6 @@ export default function FloatingPhotos() {
             loop
             muted
             playsInline
-            onEnded={handleLoop}
           />
         </div>
       </div>
@@ -51,7 +45,6 @@ export default function FloatingPhotos() {
             loop
             muted
             playsInline
-            onEnded={handleLoop}
           />
         </div>
       </div>
@@ -68,7 +61,6 @@ export default function FloatingPhotos() {
             loop
             muted
             playsInline
-            onEnded={handleLoop}
           />
         </div>
       </div>

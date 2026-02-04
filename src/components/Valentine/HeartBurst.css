@@ -1,0 +1,28 @@
+.heart-burst {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.heart-burst span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.8rem;
+  animation: burst 1.2s ease-out forwards;
+}
+
+.heart-burst span:nth-child(n) {
+  transform: rotate(calc(var(--i) * 12deg));
+}
+
+@keyframes burst {
+  to {
+    transform: translate(
+      calc((random() - 0.5) * 400px),
+      calc((random() - 0.5) * 400px)
+    );
+    opacity: 0;
+  }
+}

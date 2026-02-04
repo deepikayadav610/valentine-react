@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap");
+
+/* =====================
+   PAGE WRAPPER
+===================== */
+.valentine-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffe4e6, #fecdd3);
+  position: relative;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  padding: 20px;
+}
+
+/* =====================
+   MAIN CONTENT (NO CARD)
+===================== */
+.valentine-card {
+  max-width: 520px;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =====================
+   TEXT STYLES
+===================== */
+.main-question {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: #7a0f2b;
+  text-shadow: 0 4px 14px rgba(122, 15, 43, 0.35);
+}
+
+.sub-text {
+  color: #8f1238;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn-yes {
+  background: linear-gradient(135deg, #e11d48, #fb7185);
+  color: white;
+  font-size: 1.3rem;
+  padding: 14px 38px;
+  border-radius: 50px;
+  border: none;
+  animation: pulse 2s infinite;
+  box-shadow: 0 12px 30px rgba(244, 63, 94, 0.45);
+  transition: transform 0.3s ease;
+}
+
+.btn-yes:hover {
+  transform: scale(1.12);
+}
+
+/* 🔧 UPDATED: NO MORE WHITE BUTTON */
+.btn-no {
+  background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+  color: #9f1239;
+  font-size: 1.3rem;
+  padding: 14px 38px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 8px 18px rgba(159, 18, 57, 0.18);
+  transition: transform 0.25s ease;
+}
+
+/* =====================
+   HINT TEXT
+===================== */
+.hint-text {
+  color: #7a0f2b;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =====================
+   FLOATING HEARTS
+===================== */
+.floating-bg span {
+  position: fixed;
+  font-size: 1.8rem;
+  animation: float 3s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* =====================
+   FLOATING PHOTOS (UPDATED – NO WHITE)
+===================== */
+.floating-photos {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.photo-card {
+  position: absolute;
+  width: 140px;
+  background: linear-gradient(135deg, #fff1f2, #fecdd3);
+  padding: 10px 10px 18px;
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(159, 18, 57, 0.22);
+  text-align: center;
+  animation: floatPhoto 4s ease-in-out infinite;
+}
+
+.photo-img {
+  height: 110px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fda4af, #fb7185);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+}
+
+.photo-card p {
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem;
+  margin-top: 6px;
+  color: #7a0f2b;
+}
+
+@keyframes floatPhoto {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-18px) rotate(var(--r, 0deg));
+  }
+}
+
+/* =====================
+   CELEBRATION MODAL
+===================== */
+.celebration-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(159, 18, 57, 0.35);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.celebration-box {
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+  padding: 35px;
+  border-radius: 30px;
+  text-align: center;
+  animation: pop 0.6s ease;
+  max-width: 90%;
+}
+
+.pop-text {
+  font-family: "Dancing Script", cursive;
+  color: #9f1239;
+  font-size: 2.4rem;
+}
+
+.celebration-box h2 {
+  color: #7a0f2b;
+}
+
+.celebration-box p {
+  color: #8f1238;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
+@media (max-width: 576px) {
+  .main-question {
+    font-size: 2.3rem;
+  }
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .btn-yes,
+  .btn-no {
+    font-size: 1.15rem;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+  }
+
+  .photo-card {
+    width: 120px;
+  }
+
+  .photo-img {
+    height: 95px;
+    font-size: 2.3rem;
+  }
+
+  .floating-bg span {
+    font-size: 1.5rem;
+  }
+}
+
+.floating-photos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Card wrapper */
+.photo-card {
+  position: absolute;
+  width: 150px;
+  height: 190px;
+  background: linear-gradient(145deg, #ffe6ef, #fff);
+  border-radius: 18px;
+  padding: 10px;
+  transform: rotate(var(--r)) translateY(0);
+  transition: transform 0.6s ease;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Inner media container */
+.photo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Images */
+.photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Videos */
+.photo-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Subtle floating animation */
+.photo-card {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% {
+    transform: rotate(var(--r)) translateY(0);
+  }
+  50% {
+    transform: rotate(var(--r)) translateY(-12px);
+  }
+  100% {
+    transform: rotate(var(--r)) translateY(0);
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .photo-card {
+    width: 110px;
+    height: 140px;
+  }
+}

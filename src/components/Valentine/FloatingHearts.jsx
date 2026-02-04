@@ -1,11 +1,20 @@
 export default function FloatingHearts() {
+  const hearts = Array.from({ length: 18 });
+
   return (
     <div className="floating-bg">
-      <span style={{ top: "10%", left: "5%" }}>💕</span>
-      <span style={{ top: "25%", right: "10%" }}>💗</span>
-      <span style={{ top: "55%", left: "8%" }}>💖</span>
-      <span style={{ top: "75%", right: "15%" }}>💓</span>
-      <span style={{ top: "40%", left: "3%" }}>💘</span>
+      {hearts.map((_, i) => (
+        <span
+          key={i}
+          style={{
+            left: `${Math.random() * 100}%`,
+            animationDuration: `${6 + Math.random() * 6}s`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+        >
+          💖
+        </span>
+      ))}
     </div>
   );
 }

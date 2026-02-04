@@ -33,7 +33,8 @@ export default function Valentine() {
       <FloatingHearts />
       <FloatingPhotos />
 
-      <div className="valentine-card text-center p-4 p-md-5">
+
+      <div className="valentine-card text-center mx-auto p-4 p-md-5">
         <p className="sub-text fade-in">
           Life is better with you in it… so I have a very important question 🥺
         </p>

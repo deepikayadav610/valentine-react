@@ -1,19 +1,22 @@
 .film-reel {
   position: fixed;
   left: 0;
-  right: 0;
+  width: 100vw;
   height: 150px;
-  z-index: 1;
+  z-index: 999;
   pointer-events: none;
   overflow: hidden;
+  background: transparent;
 }
 
+/* TOP locked */
 .film-reel.top {
-  top: 10px;
+  top: 0;
 }
 
+/* BOTTOM locked */
 .film-reel.bottom {
-  bottom: 10px;
+  bottom: 0;
 }
 
 .film-strip {

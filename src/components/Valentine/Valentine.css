@@ -3,10 +3,22 @@
 /* =====================
    PAGE WRAPPER
 ===================== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #fb7185 0%,
+    #fecdd3 40%,
+    #ffe4e6 50%,
+    #fecdd3 60%,
+    #e11d48 100%
+  );
+}
+
 .valentine-wrapper {
   min-height: 100vh;
   width: 100%;
-  background: radial-gradient(circle at top, #ffe4e6, #fecdd3);
   position: relative;
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
@@ -71,7 +83,7 @@
 }
 
 .btn-yes {
-  background: linear-gradient(135deg, #e11d48, #fb7185);
+  background: #fb7185;
   color: #fff;
   box-shadow: 0 14px 30px rgba(244, 63, 94, 0.45);
   animation: pulse 2s infinite;
@@ -212,6 +224,7 @@
 }
 
 .celebration-box {
+  position: relative; /* for close button positioning */
   background: linear-gradient(135deg, #fff1f2, #ffe4e6);
   padding: 36px;
   border-radius: 30px;
@@ -224,6 +237,25 @@
   font-family: "Dancing Script", cursive;
   font-size: 2.4rem;
   color: #9f1239;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #9f1239;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
 }
 
 @keyframes pop {

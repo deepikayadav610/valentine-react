@@ -85,7 +85,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .film-reel {
-    height: 80px;
+    height: auto;
   }
   .frame {
     min-width: 65px;

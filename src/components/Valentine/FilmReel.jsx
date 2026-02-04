@@ -8,6 +8,8 @@ const photos = [
   "/image/maitri4.jpg",
   "/image/maitri5.jpg",
   "/image/maitri6.jpg",
+  "/image/maitri7.jpg",
+  "/image/maitri8.jpg",
 ];
 
 export default function FilmReel({ playing, explode }) {

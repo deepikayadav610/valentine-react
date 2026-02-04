@@ -101,7 +101,7 @@ export default function Valentine() {
             </button>
 
             <div className="fs-1 mb-3">🎉💖🎉</div>
-            <h2 className="pop-text">YAY!!!</h2>
+            <h2 className="pop-text">Yayyyyy!!!</h2>
             <p className="fs-5 mt-2">
               Best decision ever 🥰 I can’t wait to be your Valentine ❤️
             </p>
